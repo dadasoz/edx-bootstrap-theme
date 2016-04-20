@@ -1,11 +1,17 @@
-# edx-bootstrap-theme
+# edx-bootstrap-theme - LMS
 edx-bootstrap-theme for open edX dogwood release (comprehensive theming)
 
 > Open edX responsive theme using [Bootstrap](http://getbootstrap.com/).
-
+> LMS Landing Page
 ![Screenshot](https://github.com/dadasoz/edx-bootstrap-theme/blob/master/docs/images/1.png)
+
+> LMS Login Page
 ![Screenshot](https://github.com/dadasoz/edx-bootstrap-theme/blob/master/docs/images/2.png)
+
+> LMS Registration Page
 ![Screenshot](https://github.com/dadasoz/edx-bootstrap-theme/blob/master/docs/images/3.png)
+
+> LMS Dashboard
 ![Screenshot](https://github.com/dadasoz/edx-bootstrap-theme/blob/master/docs/images/4.png)
 
 ## About this Open edX theme
