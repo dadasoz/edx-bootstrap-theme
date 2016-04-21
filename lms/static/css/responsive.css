@@ -291,7 +291,10 @@
   .post_reply_comments {
     padding-left: 20px;
   }
-    
+  
+  .social{
+    text-align: center;
+  }
 
 }
 

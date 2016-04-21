@@ -135,29 +135,30 @@ site_status_msg = get_site_status_msg(course_id)
           </li>
         % endif
       </%block>
-      % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
-          % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-          <li class="nav-global-04">
-            <a class="btn btn-success btn-lg" style="color:#FFF;margin-top: 0px;" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register Now")}</a>
-          </li>
-          % else:
-          <li class="nav-global-04">
-            <a class="btn btn-success btn-lg" style="color:#FFF;margin-top: 0px;" href="/register">${_("Register Now")}</a>
-          </li>
-          % endif
-      % endif
     </ol>
 
-    <ol class="right nav-courseware">
-    <li class="nav-courseware-01">
+    <ol class="right nav-global pull-right">
+
+    <li class="nav-global-04" style="margin: 0 5px 0 0;">
       % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
           % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-          <a class="btn btn-primary btn-lg" style="color:#FFF;margin-top: 0px;" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
+          <a class="btn btn-primary btn-sm" style="color:#FFF;margin-top: 0px;" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
           % else:
-          <a class="btn btn-primary btn-lg" style="color:#FFF;margin-top: 0px;" href="/login${login_query()}">${_("Sign in")}</a>
+          <a class="btn btn-primary btn-sm" style="color:#FFF;margin-top: 0px;" href="/login${login_query()}">${_("Sign in")}</a>
           % endif
       % endif
     </li>
+     % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+          % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
+          <li class="nav-global-04">
+            <a class="btn btn-success btn-sm" style="color:#FFF;margin-top: 0px;border-radius:4px;" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register Now")}</a>
+          </li>
+          % else:
+          <li class="nav-global-04">
+            <a class="btn btn-success btn-sm" style="color:#FFF;margin-top: 0px;border-radius:4px;" href="/register">${_("Register Now")}</a>
+          </li>
+          % endif
+      % endif
     </ol>
     % endif
   </nav>

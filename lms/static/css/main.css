@@ -2515,7 +2515,6 @@ shortcodes page css
 
 #footer ul {
   list-style: none;
-  padding: 0;
   margin: 0;
 }
 
@@ -2532,10 +2531,6 @@ shortcodes page css
 .social-share-header>li{
   margin-left: 2px !important;
   margin-top: 0px !important;
-}
-.top-bar-header{
-  padding-left: 8%;
-  padding-right: 7%;
 }
 
 .container-footer{
@@ -2583,6 +2578,38 @@ header.global .primary > a{
   box-shadow: none;
 }
 .row {
-    margin-left: -15px;
     margin-right: 0px;
+    margin-left: 0px;
+}
+
+#content section .container{
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+#bottom .container{
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+#bottom .container .row div{
+  text-align: center;
+}
+
+#bottom h3 {
+    padding: 0px 35px;
+}
+
+.content-wrapper {
+    min-height: 460px;
+}
+
+.dashboard .my-courses {
+    width: initial;
+}
+
+.dashboard {
+    padding: 40px 22px 20px 22px;
 }
