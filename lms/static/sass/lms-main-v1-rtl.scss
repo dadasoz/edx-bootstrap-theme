@@ -2,4 +2,7 @@
 @import 'overrides';
 
 // import the rest of the application
+@import 'lms/static/sass/lms-main-v1-rtl';
+
+// import the rest of the application
 @import 'lms/static/sass/lms-main-v2-rtl';

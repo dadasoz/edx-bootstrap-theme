@@ -1,0 +1,13 @@
+// Theming overrides for sample theme
+@import 'overrides';
+
+// import the rest of the application
+@import 'lms/static/sass/lms-main-v1';
+
+// import the rest of the application
+@import 'lms/static/sass/lms-main-v2';
+
+// dashboard classes
+@import "multicourse/_dashboard";
+
+@import '_custom';

@@ -375,10 +375,6 @@ input.search-form:hover {
   margin-top: 150px;
 }
 
-#main-slider .carousel .slide-margin{
-  margin-top: 140px;
-}
-
 #main-slider .carousel h2 {
   color: #fff;
 }
@@ -408,7 +404,7 @@ input.search-form:hover {
   position: absolute;
   width: 100%;
   display: block !important;
-  height: 730px;
+  height: 582px;
   -webkit-transition: opacity ease-in-out 500ms;
   -moz-transition: opacity ease-in-out 500ms;
   -o-transition: opacity ease-in-out 500ms;
@@ -2604,10 +2600,6 @@ header.global .primary > a{
 
 .content-wrapper {
     min-height: 460px;
-}
-
-.dashboard .my-courses {
-    width: initial;
 }
 
 .dashboard {

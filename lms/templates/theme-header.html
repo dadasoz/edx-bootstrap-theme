@@ -45,7 +45,7 @@ site_status_msg = get_site_status_msg(course_id)
         </div>
         <div class="col-md-6 col-xs-6">
            <div class="social">
-                <ul class="social-share social-share-header">
+                <ul class="social-share social-share-header pull-right">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
@@ -60,7 +60,7 @@ site_status_msg = get_site_status_msg(course_id)
     <!-- This file is only for demonstration, and is horrendous! -->
     <nav aria-label="${_('Global')}">
     <div class="col-md-4">
-      <h1 class="logo">
+      <h1 class="logo pull-left" style="margin-top: 10px;">
         <a href="${marketing_link('ROOT')}">
           <%block name="navigation_logo">
               <img src="${static.url("images/logo.png")}" alt=""/>
@@ -70,7 +70,6 @@ site_status_msg = get_site_status_msg(course_id)
     </div>
 
     <div class="col-md-4">
-    \TEst
       % if course:
       <h2><span class="provider">${course.display_org_with_default | h}:</span>
         ${course.display_number_with_default | h}
@@ -100,9 +99,7 @@ site_status_msg = get_site_status_msg(course_id)
           %endif
         </%block>
       </ol>
-    </div>
 
-    <div class="col-md-4">
       <div class="dropdown pull-right">
         <button class="btn btn-primary dropdown-toggle" style="box-shadow: unset;" type="button">${user.username}
         <span class="caret"></span></button>
@@ -116,45 +113,36 @@ site_status_msg = get_site_status_msg(course_id)
       </div>
 
         % if should_display_shopping_cart_func(): # see shoppingcart.context_processor.user_has_cart_context_processor
-          <ol class="user">
-            <li class="primary">
               <a class="shopping-cart" href="${reverse('shoppingcart.views.show_cart')}">
                 <i class="icon fa fa-shopping-cart"></i> ${_("Shopping Cart")}
               </a>
-            </li>
-          </ol>
         % endif
+
       % else:
-      <ol class="left nav-global">
         <%block name="navigation_global_links">
           % if microsite.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
-            <li class="nav-global-01">
               <a href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
-            </li>
             % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-              <li class="nav-global-02">
                 <a href="${marketing_link('COURSES')}">${_("Courses")}</a>
-              </li>
             % endif
-            <li class="nav-global-03">
               <a href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
-            </li>
           % endif
         </%block>
-      </ol>
+      </div>
+      <div class="col-md-4 header-btns">
 
         % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
             % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-            <a class="btn btn-primary btn-sm" style="color:#FFF;margin-top: 0px;" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
+            <a class="btn btn-primary btn-sm pull-right" style="color:#FFF;margin-top: 0px;" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
             % else:
-            <a class="btn btn-primary btn-sm" style="color:#FFF;margin-top: 0px;" href="/login${login_query()}">${_("Sign in")}</a>
+            <a class="btn btn-primary btn-sm pull-right" style="color:#FFF;margin-top: 0px;" href="/login${login_query()}">${_("Sign in")}</a>
             % endif
         % endif
        % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
             % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-              <a class="btn btn-success btn-sm" style="color:#FFF;margin-top: 0px;border-radius:4px;" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register Now")}</a>
+              <a class="btn btn-success btn-sm pull-right" style="color:#FFF;margin-top: 0px;border-radius:4px;" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register Now")}</a>
             % else:
-              <a class="btn btn-success btn-sm" style="color:#FFF;margin-top: 0px;border-radius:4px;" href="/register">${_("Register Now")}</a>
+              <a class="btn btn-success btn-sm pull-right" style="color:#FFF;margin-top: 0px;border-radius:4px;" href="/register">${_("Register Now")}</a>
             % endif
         % endif
 

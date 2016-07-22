@@ -8,8 +8,24 @@ body .wrapper-footer {
     padding: 0px;
     width: calc;
 }
-.logo a{
-    float: left;
-    padding-bottom: 4px;
-    margin-top: -12px; 
+
+.header-btns .btn-success{
+    padding: 7px 18px;
+    margin-right: 10px
+}
+
+.header-btns{
+    padding-top: 15px;
+}
+
+.theme-content-wrapper {
+    max-width: 100%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.theme-content-wrapper .container{
+    border: none;
+    background-color: transparent;
+    padding: 0px;
 }
