@@ -9,13 +9,22 @@ body .wrapper-footer {
     width: calc;
 }
 
-.header-btns .btn-success{
+.header-btns .btn-success .btn-info{
     padding: 7px 18px;
     margin-right: 10px
 }
 
 .header-btns{
+    padding-top: 5px;
+}
+
+.header-btns-login{
     padding-top: 15px;
+}
+
+.header-btns-login .btn-success .btn-info{
+    padding: 7px 18px;
+    margin-right: 10px
 }
 
 .theme-content-wrapper {
@@ -28,4 +37,12 @@ body .wrapper-footer {
     border: none;
     background-color: transparent;
     padding: 0px;
+}
+
+.color-black{
+  color: black !important;;
+}
+
+.p-l-5{
+    margin-left: 5px;
 }

@@ -1,5 +1,4 @@
 jQuery(function($) {'use strict',
-
 	//#main-slider
 	$(function(){
 		$('#main-slider.carousel').carousel({
@@ -66,5 +65,5 @@ jQuery(function($) {'use strict',
 	//Pretty Photo
 	$("a[rel^='prettyPhoto']").prettyPhoto({
 		social_tools: false
-	});	
+	});
 });
