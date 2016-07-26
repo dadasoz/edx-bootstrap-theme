@@ -95,7 +95,7 @@ site_status_msg = get_site_status_msg(course_id)
         <ol class="left nav-global authenticated header-btns">
             % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
               <li class="nav-global-01">
-                <a class="btn btn-info btn-sm pull-left color-black p-l-5" href="${marketing_link('COURSES')}"><i class="icon fa fa-search"></i>${_('Find Courses')}</a>
+                <a class="btn btn-info btn-sm pull-left color-black" href="${marketing_link('COURSES')}"><i class="icon fa fa-search p-l-5"></i>${_('Find Courses')}</a>
               </li>
             % endif
             %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
@@ -137,7 +137,7 @@ site_status_msg = get_site_status_msg(course_id)
           <%block name="navigation_global_links_authenticated">
             % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
               <li class="nav-global-01">
-                <a class="btn btn-info btn-sm pull-left color-black p-l-5" href="${marketing_link('COURSES')}"><i class="icon fa fa-search"></i>${_('Find Courses')}</a>
+                <a class="btn btn-info btn-sm pull-left color-black" href="${marketing_link('COURSES')}"><i class="icon fa fa-search p-l-5" style="margin-right: 5px;"></i>${_('Find Courses')}</a>
               </li>
             % endif
             %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
