@@ -20,8 +20,8 @@ It is based on [Bootstrap](http://getbootstrap.com/), it uses bootstrap's Sass l
 
 ## How to use this theme
 
-First, open your '/edx/app/edxapp/edx-platform/themes' directory and clone this repo in as edx-bootstrap-theme. 
+First, clone this repository to '/edx/app/edxapp/edx-platform/themes/edx-bootstrap-theme'.
 
-Next, open your 'lms.env.json' file and edit 'COMPREHENSIVE_THEME_DIR' to '/edx/app/edxapp/edx-platform/themes/edx-bootstrap-theme'
+Next, open '/edx/app/edxapp/lms.env.json' and edit `COMPREHENSIVE_THEME_DIR` to `/edx/app/edxapp/edx-platform/themes/edx-bootstrap-theme`
 
-Save this file, and run 'paver updaate_assets lms' then 'paver lms'.
+Finally activate the virtualenv (/edx/app/edxapp/venvs/edxapp), `cd /edx/app/edxapp/edx-platform`, and run `paver update_assets lms` then `paver lms`.
