@@ -46,3 +46,24 @@ body .wrapper-footer {
 .header-btns {
     margin-top: 2.5% !important;
 }
+
+.is-authenticated  .header-btns-auth{
+    margin-top: 0px !important;
+}
+
+.dashboard .dashboard-search-bar{
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+
+.view-in-course   .header-btns-auth{
+    margin-top: 0px !important;
+}
+
+.view-courseware   .header-btns-auth{
+    margin-top: 0px !important;
+}
+
+.courseware  .header-btns-auth{
+    margin-top: 0px !important;
+}

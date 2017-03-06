@@ -75,6 +75,26 @@ import json
 </div>
 
 <section class="dashboard" id="dashboard-main">
+
+  % if settings.FEATURES.get('ENABLE_DASHBOARD_SEARCH'):
+    <div class="row">
+      <div id="dashboard-search-bar" class="search-bar dashboard-search-bar col-md-12" role="search" aria-label="Dashboard">
+        <form>
+          <label for="dashboard-search-input">${_('Search Your Courses')}</label>
+          <div class="search-field-wrapper">
+            <input id="dashboard-search-input" type="text" class="search-field"/>
+            <button type="submit" class="search-button" aria-label="${_('Search')}">
+              <i class="icon fa fa-search" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="cancel-button" aria-label="${_('Clear search')}">
+              <i class="icon fa fa-remove" aria-hidden="true"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  % endif
+
   <div class="row">
   <section class="my-courses col-md-8" id="my-courses" role="main" aria-label="Content">
     <header class="wrapper-header-courses">
@@ -132,23 +152,7 @@ import json
       </div>
     % endif
   </section>
-  
-  % if settings.FEATURES.get('ENABLE_DASHBOARD_SEARCH'):
-    <div id="dashboard-search-bar" class="search-bar dashboard-search-bar col-md-4" role="search" aria-label="Dashboard">
-      <form>
-        <label for="dashboard-search-input">${_('Search Your Courses')}</label>
-        <div class="search-field-wrapper">
-          <input id="dashboard-search-input" type="text" class="search-field"/>
-          <button type="submit" class="search-button" aria-label="${_('Search')}">
-            <i class="icon fa fa-search" aria-hidden="true"></i>
-          </button>
-          <button type="button" class="cancel-button" aria-label="${_('Clear search')}">
-            <i class="icon fa fa-remove" aria-hidden="true"></i>
-          </button>
-        </div>
-      </form>
-    </div>
-  % endif
+
 
   % if settings.FEATURES.get('ENABLE_DASHBOARD_SEARCH'):
     <section id="dashboard-search-results" class="search-results dashboard-search-results"></section>

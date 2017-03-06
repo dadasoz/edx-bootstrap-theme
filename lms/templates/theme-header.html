@@ -6,15 +6,14 @@
 <%!
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
+from openedx.core.djangolib.markup import HTML
 
 # App that handles subdomain specific branding
 import branding
 # app that handles site status messages
 from status.status import get_site_status_msg
 
-from microsite_configuration import microsite
-from microsite_configuration.templatetags.microsite import platform_name
-from ccx.overrides import get_current_ccx
+from lms.djangoapps.ccx.overrides import get_current_ccx
 %>
 
 ## Provide a hook for themes to inject branding on top.
@@ -109,7 +108,7 @@ site_status_msg = get_site_status_msg(course_id)
         %endif
       </div>
 
-      <div class="col-md-4 header-btns">
+      <div class="col-md-4 header-btns header-btns-auth">
         <div class="dropdown pull-right">
           <button class="btn btn-primary dropdown-toggle" style="box-shadow: unset;" type="button">${user.username}
           <span class="caret"></span></button>
@@ -124,7 +123,7 @@ site_status_msg = get_site_status_msg(course_id)
       </div>  
       % else:
         <%block name="navigation_global_links">
-          % if microsite.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
+          % if static.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
               <a href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
             % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
                 <a href="${marketing_link('COURSES')}">${_("Courses")}</a>
